@@ -5,12 +5,14 @@ import test from "node:test";
 const sourcePath = new URL("../src/page.js", import.meta.url);
 const webuiPath = new URL("../../cloudflare-webui/worker.js", import.meta.url);
 const serverPath = new URL("../../server.js", import.meta.url);
+const vercelPath = new URL("../../vercel/lib/page.js", import.meta.url);
 const loonPath = new URL("../../../ios-location-spoofer.lnplugin", import.meta.url);
 
 const pages = [
   ["source page", await readFile(sourcePath, "utf8")],
   ["webui artifact", await readFile(webuiPath, "utf8")],
   ["node server page", await readFile(serverPath, "utf8")],
+  ["vercel page", await readFile(vercelPath, "utf8")],
 ];
 
 for (const [label, content] of pages) {

@@ -100,6 +100,7 @@ location-picker/db.js               # SQLite layer (tokens / coords / logs / sta
 location-picker/admin.js            # Admin console API
 location-picker/admin-page.js       # Admin console page
 location-picker/worker/             # Cloudflare Worker version (no VPS; supports Loon configUrl)
+location-picker/vercel/             # Vercel version (Edge Function + Upstash Redis; same API as the Worker)
 location-picker/RAILWAY.md          # Railway deployment guide
 ```
 
@@ -113,6 +114,7 @@ Change location often and tired of looking up coordinates by hand? The bundled [
 |--------|-----------|----------|
 | **Cloudflare Worker — Wrangler CLI** (recommended) | [`location-picker/worker/`](location-picker/worker/) | No VPS, HTTPS included; comfortable with the CLI |
 | **Cloudflare Worker — dashboard** | [`location-picker/cloudflare-webui/`](location-picker/cloudflare-webui/) | No VPS, HTTPS included; no npm/Wrangler — paste a single file |
+| **Vercel** | [`location-picker/vercel/`](location-picker/vercel/) | No VPS, HTTPS included; you already use Vercel (Edge Function + Upstash Redis) |
 | **Railway** | [`location-picker/RAILWAY.md`](location-picker/RAILWAY.md) | No VPS, HTTPS domain included; runs the full Node version instead of a Worker |
 | Self-hosted Node | [`location-picker/server.js`](location-picker/server.js) | You have your own VPS / NAS |
 | Docker | [`location-picker/Dockerfile`](location-picker/Dockerfile) | You have Docker |

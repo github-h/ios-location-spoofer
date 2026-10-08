@@ -1,0 +1,3 @@
+# Vercel CLI 本地产物，不入库
+.vercel
+.env*.local

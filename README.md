@@ -157,6 +157,7 @@ location-picker/admin.js             # 管理台接口 /admin/api/*
 location-picker/admin-page.js        # 管理台页面
 location-picker/worker/              # Cloudflare Worker 版（免 VPS）
 location-picker/cloudflare-webui/    # 网页后台版
+location-picker/vercel/              # Vercel 版（Edge Function + Upstash Redis，接口同 Worker 版）
 location-picker/RAILWAY.md           # Railway 部署指南
 ```
 
@@ -170,6 +171,7 @@ location-picker/RAILWAY.md           # Railway 部署指南
 |---------|------|------|
 | **Cloudflare Worker — Wrangler CLI**（推荐） | [`location-picker/worker/`](location-picker/worker/) | 免 VPS、自带 HTTPS；熟悉命令行 |
 | **Cloudflare Worker — 网页后台** | [`location-picker/cloudflare-webui/`](location-picker/cloudflare-webui/) | 免 VPS、自带 HTTPS；不想装 npm / Wrangler |
+| **Vercel** | [`location-picker/vercel/`](location-picker/vercel/) | 免 VPS、自带 HTTPS；已有 Vercel 账号 |
 | **Railway** | [`location-picker/RAILWAY.md`](location-picker/RAILWAY.md) | 免 VPS、自带 HTTPS 域名；想跑完整 Node 版而不是 Worker |
 | Node 自托管 | [`location-picker/server.js`](location-picker/server.js) | 有自己的 VPS / NAS |
 | Docker | [`location-picker/Dockerfile`](location-picker/Dockerfile) | 有 Docker 环境 |
